@@ -4,7 +4,7 @@ services:
   # ----------------------
 
   postgres:
-    image: postgres:latest
+    image: postgres:17
     container_name: postgres_db
     restart: always
     environment:
@@ -29,7 +29,7 @@ services:
 
   dbeaver:
     image: dbeaver/cloudbeaver
-    ports: ["8080:8978"]
+    ports: ["8978:8978"]
     container_name: dbeaver-admin
     restart: unless-stopped
     volumes:
